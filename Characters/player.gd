@@ -1,7 +1,9 @@
 extends CharacterBody2D
 
 
-@export var speed : float = 300.0
+@export var speed : float = 200.0
+
+@onready var animation_tree : AnimationTree = $AnimationTree
 
 func _physics_process(delta):
 	# Get the input direction and handle the movement/deceleration.
@@ -20,3 +22,11 @@ func _physics_process(delta):
 		velocity = Vector2.ZERO
 		
 	move_and_slide()
+
+func update_animation_parameters():
+	if (velocity == Vector2.ZERO):
+		animation_tree["parameters/conditions/idle"] = true
+		animation_tree["parameters/conditions/is_moving"] = false
+	else:
+		animation_tree["parameters/conditions/idle"] = false
+		animation_tree["parameters/conditions/is_moving"] = true
