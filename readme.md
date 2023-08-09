@@ -5,4 +5,8 @@ This is a project for Godot 4.1 following along the Chris' Tutorials series on h
 ## Requirements
 
 - [Godot 4.1](https://godotengine.org/)
-- ["Gatherer Exteriors" asset pack by Chris' Tutorials](https://chris-tutorials.itch.io/gatherers-exterior-pack) (Move all art assets into Art/GatherersExterior folder)
+- ["Gatherer Exteriors" asset pack by Chris' Tutorials](https://chris-tutorials.itch.io/gatherers-exterior-pack) (Move all art assets into Art/GatherersExterior)
+
+## Installation
+
+Unzip asset pack and move contents into Art/GatherersExterior
