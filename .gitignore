@@ -1,0 +1,7 @@
+# Godot 4+ specific ignores
+.godot/
+*.translation
+
+# Project specific ignores
+# (Art purchased from https://chris-tutorials.itch.io/gatherers-exterior-pack)
+Art/GatherersExterior/*
