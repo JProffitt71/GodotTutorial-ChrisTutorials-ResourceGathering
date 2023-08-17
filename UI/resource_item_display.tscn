@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://pe8myaotk7ao"]
+
+[ext_resource type="Script" path="res://UI/ResourceItemDisplay.gd" id="1_g3ns0"]
+[ext_resource type="Texture2D" uid="uid://cpw3lwxcn4gr8" path="res://Art/GatherersExterior/Resources/coin_copper.png" id="2_p17wx"]
+
+[node name="ResourceItemDisplay" type="HBoxContainer"]
+offset_right = 80.0
+offset_bottom = 17.0
+script = ExtResource("1_g3ns0")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("2_p17wx")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+theme_override_constants/line_spacing = 0
+theme_override_font_sizes/font_size = 12
+text = "0"

@@ -1,27 +1,49 @@
-[gd_scene load_steps=3 format=3 uid="uid://d0ttisf6wafoq"]
+[gd_scene load_steps=6 format=3 uid="uid://d0ttisf6wafoq"]
 
 [ext_resource type="PackedScene" uid="uid://c5uk3hll7vart" path="res://Characters/player.tscn" id="1_c5gqs"]
 [ext_resource type="PackedScene" uid="uid://brf0rw783a2qy" path="res://Objects/Resources/resource_node_rock_tall.tscn" id="2_a35q5"]
+[ext_resource type="PackedScene" uid="uid://xn00shj7v66b" path="res://Objects/Pickups/pickup_rock.tscn" id="3_og2jc"]
+[ext_resource type="PackedScene" uid="uid://2tp3qrw04af3" path="res://UI/resource_display.tscn" id="4_5j3fb"]
+[ext_resource type="PackedScene" uid="uid://b00jitme15y7t" path="res://Objects/Pickups/pickup_brown_wood.tscn" id="5_ry58s"]
 
 [node name="GameLevel" type="Node2D"]
 y_sort_enabled = true
 
 [node name="Player" parent="." instance=ExtResource("1_c5gqs")]
-position = Vector2(139, 66)
+y_sort_enabled = false
+position = Vector2(0, 0)
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
+z_as_relative = false
 remote_path = NodePath("../../Camera2D")
 
 [node name="ResourceNode_RockTall" parent="." instance=ExtResource("2_a35q5")]
-position = Vector2(245, 100)
+position = Vector2(51, -22)
 
 [node name="ResourceNode_RockTall2" parent="." instance=ExtResource("2_a35q5")]
-position = Vector2(136, 136)
+position = Vector2(-58, 14)
 
 [node name="ResourceNode_RockTall3" parent="." instance=ExtResource("2_a35q5")]
-position = Vector2(221, 165)
+position = Vector2(27, 43)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(139, 66)
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
+
+[node name="Pickup_Rock" parent="." instance=ExtResource("3_og2jc")]
+position = Vector2(37, 9)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ResourceDisplay" parent="CanvasLayer" instance=ExtResource("4_5j3fb")]
+offset_right = -923.0
+offset_bottom = -508.0
+
+[node name="Pickup_Rock2" parent="." instance=ExtResource("3_og2jc")]
+position = Vector2(-48, -37)
+
+[node name="Pickup_Rock3" parent="." instance=ExtResource("5_ry58s")]
+position = Vector2(-14, -55)
+
+[node name="Pickup_Rock4" parent="." instance=ExtResource("5_ry58s")]
+position = Vector2(-75, -16)

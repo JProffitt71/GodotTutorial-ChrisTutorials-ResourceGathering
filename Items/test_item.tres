@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="EquippableItem" load_steps=3 format=3 uid="uid://bqt0djevxpj3b"]
+
+[ext_resource type="Script" path="res://Items/EquippableItem.gd" id="1_h120o"]
+[ext_resource type="Texture2D" uid="uid://d3ceunc6si4n0" path="res://Art/GatherersExterior/Tools/hammer_copper.png" id="2_k4w68"]
+
+[resource]
+script = ExtResource("1_h120o")
+display_name = "Test Item"
+texture = ExtResource("2_k4w68")

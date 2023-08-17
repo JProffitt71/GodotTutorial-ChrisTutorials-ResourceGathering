@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://xn00shj7v66b"]
+
+[ext_resource type="Script" path="res://Objects/Pickups/Pickup.gd" id="1_kjlvn"]
+[ext_resource type="Texture2D" uid="uid://43j3hwt7f41" path="res://Art/GatherersExterior/Resources/rock_item.png" id="2_n3wb5"]
+[ext_resource type="Resource" uid="uid://40ft3xlyav0v" path="res://Items/Resources/resource_rock.tres" id="2_r1odc"]
+[ext_resource type="Texture2D" uid="uid://kwjqxew0iojd" path="res://Art/TestAssets/Tiles/platformPack_tile036.png" id="3_kdm8l"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2l8w1"]
+radius = 4.0
+
+[node name="Pickup_Brown_Wood" type="Area2D"]
+script = ExtResource("1_kjlvn")
+resource_type = ExtResource("2_r1odc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_n3wb5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_2l8w1")
+
+[node name="DebugGroundMarker" type="Sprite2D" parent="."]
+visible = false
+z_index = 1
+position = Vector2(3.8147e-06, -2.38419e-07)
+scale = Vector2(0.0546875, 0.0546875)
+texture = ExtResource("3_kdm8l")

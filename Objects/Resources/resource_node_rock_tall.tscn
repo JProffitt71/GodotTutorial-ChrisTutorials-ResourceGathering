@@ -1,16 +1,27 @@
-[gd_scene load_steps=3 format=3 uid="uid://brf0rw783a2qy"]
+[gd_scene load_steps=6 format=3 uid="uid://brf0rw783a2qy"]
 
 [ext_resource type="Texture2D" uid="uid://rhm6vv402jdn" path="res://Art/GatherersExterior/Objects/Grass/Rock_Tall1.png" id="1_4r4xi"]
+[ext_resource type="Script" path="res://Objects/Resources/ResourceNode.gd" id="1_jtksp"]
+[ext_resource type="Resource" uid="uid://bosimqqp6qnsk" path="res://Objects/Resources/Types/minable.tres" id="2_nwyd0"]
+[ext_resource type="PackedScene" uid="uid://xn00shj7v66b" path="res://Objects/Pickups/pickup_rock.tscn" id="3_4mjx8"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_evva3"]
 radius = 7.0
 height = 14.0
 
 [node name="ResourceNode_RockTall" type="StaticBody2D"]
+script = ExtResource("1_jtksp")
+node_types = Array[Resource("res://Objects/Resources/Types/ResourceNodeType.gd")]([ExtResource("2_nwyd0")])
+pickup_type = ExtResource("3_4mjx8")
+pickup_launch_min_speed = 250.0
+pickup_launch_min_vertical_angle_deg = 70.0
+pickup_launch_max_vertical_angle_deg = 80.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 3)
 texture = ExtResource("1_4r4xi")
+offset = Vector2(0, -10)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 4)
+position = Vector2(0, -3)
 shape = SubResource("CapsuleShape2D_evva3")
