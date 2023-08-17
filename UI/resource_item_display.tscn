@@ -6,6 +6,7 @@
 [node name="ResourceItemDisplay" type="HBoxContainer"]
 offset_right = 80.0
 offset_bottom = 17.0
+theme_override_constants/separation = 2
 script = ExtResource("1_g3ns0")
 
 [node name="TextureRect" type="TextureRect" parent="."]
