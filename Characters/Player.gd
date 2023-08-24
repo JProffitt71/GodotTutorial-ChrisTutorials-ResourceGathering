@@ -7,6 +7,7 @@ class_name Player
 @onready var animation_tree : AnimationTree = $AnimationTree
 
 var direction : Vector2 = Vector2.ZERO
+var swinging : bool = false
 
 func _ready():
 	animation_tree.active = true
@@ -15,6 +16,10 @@ func _process(delta):
 	update_animation_parameters()
 
 func _physics_process(delta):
+	# Skip any movement processing if we're swinging
+	
+	if swinging:
+		return;
 	
 	# Get the input direction and handle the movement/deceleration.
 	
@@ -50,3 +55,13 @@ func update_animation_parameters():
 		animation_tree["parameters/Idle/blend_position"] = direction
 		animation_tree["parameters/Walk/blend_position"] = direction
 		animation_tree["parameters/Swing/blend_position"] = direction
+
+
+func _on_animation_tree_animation_started(anim_name):
+	if anim_name in ["swing_up", "swing_left", "swing_right", "swing_down"]:
+		swinging = true
+
+
+func _on_animation_tree_animation_finished(anim_name):
+	if anim_name in ["swing_up", "swing_left", "swing_right", "swing_down"]:
+		swinging = false

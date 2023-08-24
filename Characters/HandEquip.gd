@@ -1,6 +1,8 @@
 @tool
 extends Sprite2D
 
+class_name HandEquip
+
 @export var equipped_item : EquippableItem:
 	set(new_equipped_item):
 		print("Setting a new equipped item ", new_equipped_item)
@@ -13,4 +15,4 @@ extends Sprite2D
 
 func _on_area_2d_body_entered(body):
 	if (equipped_item.has_method("interact_with_body")):
-		equipped_item.interact_with_body(body.global_position - global_position, body)
+		equipped_item.interact_with_body(body.position - find_parent("Player").position, body)

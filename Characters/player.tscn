@@ -1,19 +1,19 @@
 [gd_scene load_steps=56 format=3 uid="uid://c5uk3hll7vart"]
 
-[ext_resource type="Script" path="res://Characters/player.gd" id="1_pldhi"]
+[ext_resource type="Script" path="res://Characters/Player.gd" id="1_pldhi"]
 [ext_resource type="Texture2D" uid="uid://booer2ik5days" path="res://Art/GatherersExterior/Characters/Gatherer-Swing_Down.png" id="1_ric3s"]
 [ext_resource type="Texture2D" uid="uid://cdr2t8758v6fl" path="res://Art/GatherersExterior/Characters/Gatherer-Walk_Down.png" id="2_kxnyk"]
-[ext_resource type="Texture2D" uid="uid://ds74ts71na4vc" path="res://Art/GatherersExterior/Tools/pickaxe_copper.png" id="3_jv5xb"]
 [ext_resource type="Script" path="res://Characters/HandEquip.gd" id="3_u61b4"]
+[ext_resource type="Texture2D" uid="uid://d1ni53yfykwcw" path="res://Art/GatherersExterior/Tools/axe_copper.png" id="4_hyqxy"]
 [ext_resource type="Texture2D" uid="uid://baa7sfoca8a8x" path="res://Art/GatherersExterior/Characters/Gatherer-Walk_Up.png" id="4_na867"]
 [ext_resource type="Texture2D" uid="uid://c8fn2eaj7ssrx" path="res://Art/GatherersExterior/Characters/Gatherer-Walk_Left.png" id="5_k8kxo"]
+[ext_resource type="Resource" uid="uid://disgi61b6o1do" path="res://Items/Equipment/copper_axe.tres" id="6_4lvhr"]
 [ext_resource type="Texture2D" uid="uid://k5fp7n4nubrj" path="res://Art/GatherersExterior/Characters/Gatherer-Walk_Right.png" id="6_l4lj3"]
 [ext_resource type="Script" path="res://Characters/AttractionArea.gd" id="7_7n1ec"]
 [ext_resource type="Texture2D" uid="uid://dq536ksjhhxny" path="res://Art/GatherersExterior/Characters/Gatherer-Swing_Up.png" id="7_utehy"]
 [ext_resource type="Texture2D" uid="uid://h1svkhpq52bh" path="res://Art/GatherersExterior/Characters/Gatherer-Swing_Left.png" id="8_wvgi4"]
 [ext_resource type="Texture2D" uid="uid://bi6dle335veon" path="res://Art/GatherersExterior/Characters/Gatherer-Swing_Right.png" id="9_jqd6v"]
 [ext_resource type="Script" path="res://addons/DrawOrderRig2D/DrawOrderRig2D.gd" id="10_r40av"]
-[ext_resource type="Resource" uid="uid://y2aebx4b6mv7" path="res://Items/copper_pickaxe.tres" id="13_78vod"]
 [ext_resource type="Script" path="res://Characters/Inventory.gd" id="14_tyqo2"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_f0g41"]
@@ -124,6 +124,18 @@ tracks/7/keys = {
 "update": 1,
 "values": [0]
 }
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("HandEquipDrawOrderRig/HandEquip/Area2D/CollisionShape2D:disabled")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="Animation" id="Animation_ivrtg"]
 resource_name = "idle_down"
@@ -224,6 +236,18 @@ tracks/7/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [10]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("HandEquipDrawOrderRig/HandEquip/Area2D/CollisionShape2D:disabled")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_86m54"]
@@ -326,6 +350,18 @@ tracks/7/keys = {
 "update": 1,
 "values": [0]
 }
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("HandEquipDrawOrderRig/HandEquip/Area2D/CollisionShape2D:disabled")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="Animation" id="Animation_o0khy"]
 resource_name = "idle_right"
@@ -426,6 +462,18 @@ tracks/7/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("HandEquipDrawOrderRig/HandEquip/Area2D/CollisionShape2D:disabled")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_1x3tj"]
@@ -528,6 +576,18 @@ tracks/7/keys = {
 "update": 1,
 "values": [0]
 }
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("HandEquipDrawOrderRig/HandEquip/Area2D/CollisionShape2D:disabled")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="Animation" id="Animation_b2mwv"]
 resource_name = "swing_down"
@@ -628,6 +688,18 @@ tracks/7/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [10]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("HandEquipDrawOrderRig/HandEquip/Area2D/CollisionShape2D:disabled")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
 }
 
 [sub_resource type="Animation" id="Animation_rcc7i"]
@@ -730,6 +802,18 @@ tracks/7/keys = {
 "update": 1,
 "values": [10]
 }
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("HandEquipDrawOrderRig/HandEquip/Area2D/CollisionShape2D:disabled")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
 
 [sub_resource type="Animation" id="Animation_ocm64"]
 resource_name = "swing_right"
@@ -781,7 +865,7 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [Vector2(-1, 1)]
+"values": [Vector2(1, 1)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -805,7 +889,7 @@ tracks/5/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.4),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [6.05042, 0.0983605, 2.22245]
+"values": [4.48026, -1.494, 0.651008]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
@@ -818,6 +902,18 @@ tracks/6/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("HandEquipDrawOrderRig/HandEquip/Area2D/CollisionShape2D:disabled")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
 }
 
 [sub_resource type="Animation" id="Animation_vm8s1"]
@@ -867,10 +963,10 @@ tracks/3/path = NodePath("HandEquipDrawOrderRig/HandEquip:scale")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [Vector2(1, 1)]
+"values": [Vector2(1, 1), Vector2(-1, 1)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -882,7 +978,7 @@ tracks/4/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.4),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [Vector2(13, -12), Vector2(17, -12), Vector2(2, -24)]
+"values": [Vector2(13, -12), Vector2(15, -15), Vector2(2, -24)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -894,7 +990,7 @@ tracks/5/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.4),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [0.0, 0.523598, -1.0472]
+"values": [0.0, 1.77113, 0.523599]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
@@ -919,6 +1015,18 @@ tracks/7/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("HandEquipDrawOrderRig/HandEquip/Area2D/CollisionShape2D:disabled")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
 }
 
 [sub_resource type="Animation" id="Animation_xcrtm"]
@@ -960,7 +1068,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [0, 1, 2, 3]
+"values": [1, 2, 3, 0]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -972,7 +1080,7 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [Vector2(-13, -11), Vector2(-12, -14), Vector2(-13, -11), Vector2(-12, -13)]
+"values": [Vector2(-12, -14), Vector2(-13, -11), Vector2(-12, -13), Vector2(-13, -11)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -1022,6 +1130,18 @@ tracks/7/keys = {
 "update": 1,
 "values": [10]
 }
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("HandEquipDrawOrderRig/HandEquip/Area2D/CollisionShape2D:disabled")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="Animation" id="Animation_sqm3s"]
 resource_name = "walk_left"
@@ -1062,7 +1182,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [0, 1, 2, 3]
+"values": [1, 2, 3, 0]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -1074,7 +1194,7 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [Vector2(-8, -6), Vector2(-6, -7), Vector2(-8, -6), Vector2(-10, -9)]
+"values": [Vector2(-6, -7), Vector2(-8, -6), Vector2(-10, -9), Vector2(-8, -6)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -1124,6 +1244,18 @@ tracks/7/keys = {
 "update": 1,
 "values": [0]
 }
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("HandEquipDrawOrderRig/HandEquip/Area2D/CollisionShape2D:disabled")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="Animation" id="Animation_eado6"]
 resource_name = "walk_right"
@@ -1164,7 +1296,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [0, 1, 2, 3]
+"values": [1, 2, 3, 0]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -1176,7 +1308,7 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [Vector2(8, -6), Vector2(9, -8), Vector2(8, -6), Vector2(4, -6)]
+"values": [Vector2(9, -8), Vector2(8, -6), Vector2(4, -6), Vector2(8, -6)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -1188,7 +1320,7 @@ tracks/4/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [0.523599, 0.261799, 0.523599, 0.612879]
+"values": [0.261799, 0.523599, 0.612879, 0.523599]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -1225,6 +1357,18 @@ tracks/7/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [10]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("HandEquipDrawOrderRig/HandEquip/Area2D/CollisionShape2D:disabled")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_k0ngv"]
@@ -1266,7 +1410,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [0, 1, 2, 3]
+"values": [1, 2, 3, 0]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -1278,7 +1422,7 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [Vector2(13, -11), Vector2(13, -13), Vector2(13, -12), Vector2(12, -15)]
+"values": [Vector2(13, -13), Vector2(13, -12), Vector2(12, -15), Vector2(13, -11)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -1327,6 +1471,18 @@ tracks/7/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("HandEquipDrawOrderRig/HandEquip/Area2D/CollisionShape2D:disabled")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_l2026"]
@@ -1485,19 +1641,20 @@ script = ExtResource("10_r40av")
 [node name="HandEquip" type="Sprite2D" parent="HandEquipDrawOrderRig"]
 position = Vector2(-15, -14)
 scale = Vector2(-1, 1)
-texture = ExtResource("3_jv5xb")
+texture = ExtResource("4_hyqxy")
 script = ExtResource("3_u61b4")
-equipped_item = ExtResource("13_78vod")
+equipped_item = ExtResource("6_4lvhr")
 
 [node name="Area2D" type="Area2D" parent="HandEquipDrawOrderRig/HandEquip"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HandEquipDrawOrderRig/HandEquip/Area2D"]
 position = Vector2(2.47771, 0)
 shape = SubResource("RectangleShape2D_3706v")
+disabled = true
 
 [node name="AttractionArea2D" type="Area2D" parent="."]
 script = ExtResource("7_7n1ec")
-attraction_strength = 500.0
+attraction_strength = 800.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttractionArea2D"]
 position = Vector2(0, -4)
@@ -1523,3 +1680,5 @@ parameters/Walk/blend_position = Vector2(-0.00106269, -0.00839698)
 script = ExtResource("14_tyqo2")
 
 [connection signal="body_entered" from="HandEquipDrawOrderRig/HandEquip/Area2D" to="HandEquipDrawOrderRig/HandEquip" method="_on_area_2d_body_entered"]
+[connection signal="animation_finished" from="AnimationTree" to="." method="_on_animation_tree_animation_finished"]
+[connection signal="animation_started" from="AnimationTree" to="." method="_on_animation_tree_animation_started"]

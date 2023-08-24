@@ -20,7 +20,7 @@ func launch(velocity: Vector3):
 	vertical_velocity = velocity.z
 	
 func update_pickup_position(new_position : Vector2 = Vector2.ZERO, height : float = 0):
-	position = new_position
+	global_position = new_position
 	ground_pos = new_position
 	real_pos = ground_pos + Vector2(0, -1 * max(0, height))
 
@@ -35,7 +35,7 @@ func _ready():
 	# Wait a brief moment before making this collideable
 	
 	collision_shape.set_deferred("disabled", true)
-	await get_tree().create_timer(0.5).timeout
+	await get_tree().create_timer(0.6).timeout
 	collision_shape.set_deferred("disabled", false)
 	
 func _physics_process(delta):
@@ -54,12 +54,11 @@ func _physics_process(delta):
 	if (attracting_to != null):
 		# Calculate full attraction acceleration
 		
-		var attract_vector = attracting_to.global_position - ground_pos
-		var attract_real_distance = (attract_vector * Vector2(1, 2)).length()
-		var attract_ratio = 1 - (attract_real_distance / attracting_to.attraction_radius)
-		var attract_strength = attracting_to.attraction_strength
+		# Get vector from ground position of pickup to center of attractor
 		
-		attract_acceleration = (attracting_to.global_position - ground_pos).normalized() * attract_strength * delta
+		var attract_vector = attracting_to.global_position - ground_pos
+		
+		attract_acceleration = attract_vector.normalized() * attracting_to.attraction_strength * delta
 		
 	# Pre-movement acceleration
 	

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="HarvestingTool" load_steps=3 format=3 uid="uid://byktw8c2pjjri"]
+
+[ext_resource type="Script" path="res://Items/Equipment/HarvestingTool.gd" id="1_7cf6r"]
+[ext_resource type="Texture2D" uid="uid://d3ceunc6si4n0" path="res://Art/GatherersExterior/Tools/hammer_copper.png" id="2_rr7v7"]
+
+[resource]
+script = ExtResource("1_7cf6r")
+target_types = Array[Resource("res://Objects/Resources/Types/ResourceNodeType.gd")]([])
+min_amount = 1
+max_amount = 1
+display_name = "Copper hammer"
+texture = ExtResource("2_rr7v7")

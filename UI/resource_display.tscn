@@ -16,12 +16,11 @@ corner_radius_bottom_left = 2
 shadow_color = Color(0, 0, 0, 0)
 
 [node name="ResourceDisplay" type="MarginContainer"]
-offset_right = 52.0
-offset_bottom = 46.0
-theme_override_constants/margin_left = 5
-theme_override_constants/margin_top = 5
-theme_override_constants/margin_right = 5
-theme_override_constants/margin_bottom = 5
+anchors_preset = -1
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 8.0
+offset_bottom = 8.0
 script = ExtResource("1_hr6jm")
 item_display_template = ExtResource("2_o1p5v")
 
